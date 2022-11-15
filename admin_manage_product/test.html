@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+        <div id = "img">
+            <button type="button" class = "fa fa-times-circle" id = "dlt"></button>
+            <img src="../images/background.jpg" width="50%">
+        </div>
+        <!-- <div class = "img0" id = "choose" style="display: none;">
+        <label for="image0"> Chọn ảnh bìa</label>
+                            <a onclick="delImage(0)">&times;</a>
+                            <input type="file" name="image0" id="image0">
+                            <div id="preview0"></div>
+        </div> -->
+
+        <div class = "img0" id = "choose">
+                                <input type="file" name="image0" id="image0">
+                                <a onclick="delImage(0)">&times;</a>
+                                <div id="preview0"></div>
+            </div>
+        
+        
+    
+    <script>
+        // $("#dlt").click(function () { 
+        //     $("#img").text("");
+        //     var choose = document.getElementById("choose");
+        //     choose.style.display = "block";
+        //     e.preventDefault();
+        // });
+        //delete image function
+        const delImage = (i) => {
+                    const image = document.getElementById(`image${i}`);
+                    image.value = "";
+                    const preview = document.getElementById(`preview${i}`);
+                    preview.innerHTML = "";
+                }
+                $("#image0").change(function() { //
+                    $("#img").text("");
+                    imagePreview0(this); //
+                });
+
+                function imagePreview0(fileInput) {
+                    if (fileInput.files && fileInput.files[0]) {
+                        var fileReader = new FileReader();
+                        fileReader.onload = function(event) {
+                            $('#preview0').html('<img src="' + event.target.result +'" width="100%" height="auto"/>');
+                        };
+                        fileReader.readAsDataURL(fileInput.files[0]); 
+                    }
+                }
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+section
+{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+section .img
+{
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+section .img:before
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+section .img img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section .content
+{
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.form 
+{
+  width: 50%;
+}
+.form h2
+{
+  color: #333333;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-bottom: 4px solid #ffb26b;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+.form .input 
+{
+  margin-bottom: 20px;
+}
+
+.form .input span
+{
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: #333333;
+  font-weight: 450;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.form .input input
+{
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid #607d8b;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: black;
+  background: transparent;
+  border-radius: 30px;
+}
+.form .input input[type="submit"]
+{
+  background: #ffb26b;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.form .input input[type="submit"]:hover{
+  background-color: #d37925;
+  }
+  
+
+.form .input a
+{
+  color: #ffb26b;
+}
+.form .input p{
+    color: #333333;
+}
+
+.error {
+  background: #F2DEDE;
+  color: #A94442;
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+  margin: 20px auto;
+}
+
+.error1 {
+  background: #F2DEDE;
+  color: #A94442;
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+  margin: 20px auto;
+}
+
+.success {
+  background: #D4EDDA;
+  color: #40754C;
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+  margin: 20px auto;
+}
+
+@media (max-width: 768px)
+{
+  section .img
+  {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+  }
+  section .content
+  {
+    z-index: 1;
+    width: 100%;
+  }
+  section .content .form
+  {
+    padding: 50px;
+    width: 100%;
+    margin: 30px;
+    background: rgba(255,255,255,0.9);
+  }
+}
